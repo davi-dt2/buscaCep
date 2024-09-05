@@ -7,8 +7,48 @@
 
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .info div {
+            border: 1px solid #dbdbdb;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: left; 
+            background-color: #3B4652;
+            color: #dbdbdb;
+            border-radius: 5px;
+        }
+
+        .main {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .search {
+            margin-top: 20px;
+        }
+
+        .search input {
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            background-color: #3B4652;
+            color: #dbdbdb;
+        }
+
+        .search button {
+            width: 30%;
+            padding: 10px;
+            background-color: #506274;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body">
+<body>
     <div class="header">
         <div class="nav" onclick="location.href='#';">
             <a href="#">Buscar Endereço pelo CEP</a>
@@ -17,30 +57,25 @@
             <a href="busca_cep.html">Buscar CEP pelo Endereço</a>
         </div>
     </div>
+    
     <div class="main">
         <h2 id="message">BuscaCEP</h2>
-        <div class="result">
-            <div id="rua" class="result-item">
-                Rua: 
-            </div>
-            <div id="bairro" class="result-item">
-                Bairro: 
-            </div>
-            <div id="cidade" class="result-item">
-                Cidade: 
-            </div>
-            <div id="estado" class="result-item">
-                Estado: 
-            </div>
+        <div class="info">
+            <div id="rua">Rua: </div>
+            <div id="bairro">Bairro: </div>
+            <div id="cidade">Cidade: </div>
+            <div id="estado">Estado: </div>
         </div>
+        
         <div class="search">
-            <input type="text" id="input">
+            <input type="text" id="input" placeholder="Digite o CEP">
             <button onclick="buscaEndereco(document.querySelector('#input').value)">Buscar Endereço pelo CEP</button>
         </div>
     </div>
+    
     <div class="history">
         <h2>Histórico de Pesquisas</h2>
-        <div id = "history" class="hResults"></div>
+        <div id="history" class="hResults"></div>
     </div>
 </body>
 </html>

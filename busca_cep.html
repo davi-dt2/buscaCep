@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>buscaCEP</title>
-
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar CEP pelo Endereço</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="busca_cep.js" defer></script>
+  </head>
+  <body>
     <div class="header">
-        <div class="nav" onclick="location.href='index.html';">
-            <a href="#">Buscar Endereço pelo CEP</a>
-        </div>
-        <div class="nav"  onclick="location.href='#'">
-            <a href="busca_cep.html">Buscar CEP pelo Endereço</a>
-        </div>
+      <div class="nav" onclick="location.href='index.html';">
+        <a href="#">Buscar Endereço pelo CEP</a>
+      </div>
+      <div class="nav" onclick="location.href='busca_cep.html';">
+        <a href="busca_cep.html">Buscar CEP pelo Endereço</a>
+      </div>
     </div>
     <div class="main">
-        <h2 id="message">BuscaCEP</h2>
-        <div class="search">
-            <form action="">
-                <div class="input">
-                    <label for="estado">Estado:</label>
-                    <input type="text" name="estado" id="estado">
-                </div>
-                <div class="input">
-                    <label for="cidade">Cidade:</label>
-                    <input type="text" name="cidade" id="cidade">
-                </div>
-                <div class="input">
-                    <label for="rua">Rua:</label>
-                <input type="text" name="rua" id="rua">
-                </div>
-            </form>
-            <button onclick="buscaCEP()">Buscar CEP pelo Endereço</button>
-        </div>
+      <h2 id="message">Buscar CEP pelo Endereço</h2>
+      <div class="search">
+        <form action="">
+          <div class="input">
+            <label for="estado">Estado:</label>
+            <input type="text" name="estado" id="estado" />
+          </div>
+          <div class="input">
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" />
+          </div>
+          <div class="input">
+            <label for="rua">Rua:</label>
+            <input type="text" name="rua" id="rua" />
+          </div>
+        </form>
+        <button onclick="buscaCEP()">Buscar CEP pelo Endereço</button>
+      </div>
+      <div class="results"></div>
     </div>
-    <div class="results"></div>
-</body>
+  </body>
 </html>
